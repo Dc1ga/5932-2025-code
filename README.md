@@ -1,2 +1,3 @@
-Codigo del equipo 5932 Quetzales, para el robot de la temporada 2025 de FRC "REEFSCAPE"
+# Codigo del robot - 2025
 
+Quetzales 5932
