@@ -110,24 +110,24 @@ public final class Constants {
 
   public static final class ArmConstants {
     public static final int kArmPivotCanId = 9;
-    public static final double ARM_SPEED_DOWN = 0.4;
-    public static final double ARM_SPEED_UP = -0.4;
-    public static final double ARM_HOLD_DOWN = 0.1;
-    public static final double ARM_HOLD_UP = -0.15;
+    public static final double kArmDown = 0.4;
+    public static final double kArmUp = -0.4;
+    public static final double kArmHoldDown = 0.1;
+    public static final double kArmHoldUp = -0.15;
   }
 
   public static final class RollerConstants {
     public static final int kArmRollerCanId = 10;
-    public static final double ROLLER_CORAL_OUT = -.4;
-    public static final double ROLLER_ALGAE_IN = -0.8;
-    public static final double ROLLER_ALGAE_OUT = 0.4;
-    public static final double ROLLER_CORAL_STACK = -1;
+    public static final double kArmRollerCoralOutFront = -.4;
+    public static final double kArmRollerAlgaeIn = -0.8;
+    public static final double kArmRollerAlgaeOut = 0.4;
+    public static final double kArmRollerCoralOutBack = -0.9;
   }
 
   public static final class ClimberConstants {
     public static final int kClimberCanId = 11;
-    public static final double CLIMBER_SPEED_DOWN = -0.5;
-    public static final double CLIMBER_SPEED_UP = 0.5;
+    public static final double kArmClimberDown = -0.5;
+    public static final double kArmClimberUp = 0.5;
   }
 
 
