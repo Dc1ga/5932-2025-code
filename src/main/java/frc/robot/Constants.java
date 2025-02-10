@@ -124,6 +124,12 @@ public final class Constants {
     public static final double ROLLER_CORAL_STACK = -1;
   }
 
+  public static final class ClimberConstants {
+    public static final int kClimberCanId = 11;
+    public static final double CLIMBER_SPEED_DOWN = -0.5;
+    public static final double CLIMBER_SPEED_UP = 0.5;
+  }
+
 
 
 

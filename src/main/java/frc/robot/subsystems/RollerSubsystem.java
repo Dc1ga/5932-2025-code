@@ -26,12 +26,9 @@ public class RollerSubsystem extends SubsystemBase {
     // Declarar el motor como un brushless
     m_rollerSpark = new SparkMax(RollerConstants.kArmRollerCanId, MotorType.kBrushless);
 
-    /*Ver que hace:
-    m_armSpark.setCANTimeout(250);
-    */
+    m_rollerSpark.setCANTimeout(250);
 
     // Configurar el motor, esto usa los valores de configs.java
-
     m_rollerSpark.configure(ArmIntakeModule.armRollerConfig, ResetMode.kResetSafeParameters,
         PersistMode.kPersistParameters);
     }
@@ -42,7 +39,6 @@ public class RollerSubsystem extends SubsystemBase {
 
     /** 
      * Metodo para hacer girar los rollers a una velocidad determinada
-     * 
      * 
      * @param speed velocidad del motor de -1 a 1, 0 lo detiene
      */

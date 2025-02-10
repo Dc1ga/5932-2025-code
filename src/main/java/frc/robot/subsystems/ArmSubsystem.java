@@ -26,8 +26,7 @@ public class ArmSubsystem extends SubsystemBase {
 
 
     // Este valor es cuantos grados tiene de offset el arm con respecto a los 90 grados, 
-    //por defecto a 0 ya que es desconocido, se usa con el encoder
-
+    //por defecto a 0 ya que es desconocido, se usa con el encoder.
     //private double m_armAngularOffset = 0;
 
     
@@ -40,8 +39,7 @@ public class ArmSubsystem extends SubsystemBase {
     m_armSpark = new SparkMax(ArmConstants.kArmPivotCanId, MotorType.kBrushless);
     //m_armEncoder = m_armSpark.getEncoder();
 
-    //Ver que hace
-    //m_armSpark.setCANTimeout(250);
+    m_armSpark.setCANTimeout(250);
 
     // Configurar el motor, esto usa los valores de configs.java
     m_armSpark.configure(ArmIntakeModule.armPivotConfig, ResetMode.kResetSafeParameters,

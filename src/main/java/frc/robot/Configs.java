@@ -56,7 +56,7 @@ public final class Configs {
 
     /*
      * 
-     * Configs del Arm,
+     * Configs del Arm
      * 
      */
     public static final class ArmIntakeModule {
@@ -74,6 +74,23 @@ public final class Configs {
                 .idleMode(IdleMode.kBrake)
                 .smartCurrentLimit(60)
                 .voltageCompensation(10);
+        }
+    }
+
+    /*
+     * 
+     * Configs del Climber
+     * 
+     */
+    public static final class ClimberModule {
+        public static final SparkMaxConfig ClimberConfig = new SparkMaxConfig();
+
+        static {
+
+            ClimberConfig
+                .idleMode(IdleMode.kBrake)
+                .smartCurrentLimit(60)
+                .voltageCompensation(12);
         }
     }
 }
