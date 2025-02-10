@@ -53,12 +53,24 @@ public final class Configs {
                     .positionWrappingInputRange(0, turningFactor);
         }
     }
+
+    /*
+     * 
+     * Configs del Arm,
+     * 
+     */
     public static final class ArmIntakeModule {
         public static final SparkMaxConfig armPivotConfig = new SparkMaxConfig();
+        public static final SparkMaxConfig armRollerConfig = new SparkMaxConfig();
 
         static {
 
             armPivotConfig
+                .idleMode(IdleMode.kBrake)
+                .smartCurrentLimit(60)
+                .voltageCompensation(10);
+
+            armRollerConfig
                 .idleMode(IdleMode.kBrake)
                 .smartCurrentLimit(60)
                 .voltageCompensation(10);

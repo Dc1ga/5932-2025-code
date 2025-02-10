@@ -101,12 +101,27 @@ public final class Constants {
   }
 
 
+  /*
+   * 
+   * Los CAN IDs deben deteminarse, los actuales son placeholders
+   * 
+   */
+
+
   public static final class ArmConstants {
     public static final int kArmPivotCanId = 9;
     public static final double ARM_SPEED_DOWN = 0.4;
     public static final double ARM_SPEED_UP = -0.4;
     public static final double ARM_HOLD_DOWN = 0.1;
     public static final double ARM_HOLD_UP = -0.15;
+  }
+
+  public static final class RollerConstants {
+    public static final int kArmRollerCanId = 10;
+    public static final double ROLLER_CORAL_OUT = -.4;
+    public static final double ROLLER_ALGAE_IN = -0.8;
+    public static final double ROLLER_ALGAE_OUT = 0.4;
+    public static final double ROLLER_CORAL_STACK = -1;
   }
 
 

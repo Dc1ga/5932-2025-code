@@ -8,9 +8,15 @@ import com.revrobotics.spark.SparkBase.ResetMode;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 //import com.revrobotics.RelativeEncoder;
 
-import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import edu.wpi.first.wpilibj2.command.SubsystemBase; 
 import frc.robot.Configs.ArmIntakeModule;
 import frc.robot.Constants.ArmConstants;
+
+/*
+ * 
+ * Se tiene que revisar el uso de encoders 
+ * 
+ */
 
 public class ArmSubsystem extends SubsystemBase {
 
@@ -20,7 +26,8 @@ public class ArmSubsystem extends SubsystemBase {
 
 
     // Este valor es cuantos grados tiene de offset el arm con respecto a los 90 grados, 
-    //por defecto a 0 ya que es desconocido
+    //por defecto a 0 ya que es desconocido, se usa con el encoder
+
     //private double m_armAngularOffset = 0;
 
     
@@ -33,10 +40,8 @@ public class ArmSubsystem extends SubsystemBase {
     m_armSpark = new SparkMax(ArmConstants.kArmPivotCanId, MotorType.kBrushless);
     //m_armEncoder = m_armSpark.getEncoder();
 
-    // Set can timeout. Because this project only sets parameters once on
-    // construction, the timeout can be long without blocking robot operation. Code
-    // which sets or gets parameters during operation may need a shorter timeout.
-    m_armSpark.setCANTimeout(250);
+    //Ver que hace
+    //m_armSpark.setCANTimeout(250);
 
     // Configurar el motor, esto usa los valores de configs.java
     m_armSpark.configure(ArmIntakeModule.armPivotConfig, ResetMode.kResetSafeParameters,
@@ -47,12 +52,12 @@ public class ArmSubsystem extends SubsystemBase {
     public void periodic() {
     }
     /** 
-     * This is a method that makes the arm move at your desired speed
-     *  Positive values make it spin forward and negative values spin it in reverse
+     * Metodo para mover el arm a una velocidad determinada,
+     * cambiara de velocidad a radianes o grados 
      * 
-     * @param speed motor speed from -1.0 to 1, with 0 stopping it
+     * @param speed velocidad del motor de -1 a 1, 0 lo detiene
      */
-    public void setArmDegrees(double degrees){
-        m_armSpark.set(degrees);
+    public void setArmSpeed(double speed){
+        m_armSpark.set(speed);
     }
 }
